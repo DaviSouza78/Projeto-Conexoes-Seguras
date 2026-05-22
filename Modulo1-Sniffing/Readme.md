@@ -1,4 +1,4 @@
-# 📡 Módulo 1 — Sniffing e Interceptação de Tráfego
+#  Módulo 1 — Sniffing e Interceptação de Tráfego
 
 ##  Objetivo
 
