@@ -1,10 +1,10 @@
-# 🔑 Módulo 2 — Criptografia Híbrida e o Handshake TLS
+#  Módulo 2 — Criptografia Híbrida e o Handshake TLS
 
-## 🎯 Objetivo
+##  Objetivo
 
 Demonstrar de forma prática o funcionamento matemático e lógico do **Handshake TLS** de conexões HTTPS, evidenciando como a **criptografia híbrida** resolve o dilema de segurança da internet: une a segurança da troca de chaves da criptografia **assimétrica (RSA)** com a alta velocidade da criptografia **simétrica (AES-256)**.
 
-## 🧰 Ferramentas Utilizadas
+##  Ferramentas Utilizadas
 
 | Ferramenta | Função |
 | :--- | :--- |
@@ -12,11 +12,11 @@ Demonstrar de forma prática o funcionamento matemático e lógico do **Handshak
 | `xxd` / `hexdump` | Conversão de chaves binárias para formato hexadecimal |
 | `cat` | Visualização direta de arquivos de texto e dados cifrados brutos |
 
-## 📦 Requisitos e Instalação
+##  Requisitos e Instalação
 
 O utilitário `openssl` é **nativo** nas imagens padrão do Ubuntu Server na AWS — não requer instalação adicional. Basta acessar o terminal e executar as etapas sequenciais.
 
-## 🪜 Passo a Passo
+##  Passo a Passo
 
 ### Etapa 1 — Geração de Chaves Assimétricas (Servidor)
 
@@ -54,7 +54,7 @@ Visualize os bytes protegidos em representação hexadecimal:
 xxd encrypted_key.bin
 ```
 
-> 📸 **PONTO DE EVIDÊNCIA 3** — Capture os blocos hexadecimais gerados pelo `xxd`, comprovando o envelope assimétrico que protege a chave de sessão.
+>  **PONTO DE EVIDÊNCIA 3** — Capture os blocos hexadecimais gerados pelo `xxd`, comprovando o envelope assimétrico que protege a chave de sessão.
 > Salve como `print3_handshake_rsa.png`.
 
 ### Etapa 4 — Desencriptação e Recuperação de Segredo
@@ -85,10 +85,10 @@ Tente ler o arquivo final para simular o tráfego bruto na rede:
 cat seguro.enc
 ```
 
-> 📸 **PONTO DE EVIDÊNCIA 4** — Capture a saída de `cat seguro.enc` preenchendo o terminal com caracteres binários ilegíveis, provando a proteção contra leitura local/sniffers.
+>  **PONTO DE EVIDÊNCIA 4** — Capture a saída de `cat seguro.enc` preenchendo o terminal com caracteres binários ilegíveis, provando a proteção contra leitura local/sniffers.
 > Salve como `print4_dados_simetricos.png`.
 
-## ✅ Resultado
+##  Resultado
 
 Os arquivos `session_key.txt` (cliente) e `decrypted_key.txt` (servidor) resultam em **sequências idênticas** (ex.: `8f3a9e...`), provando o sincronismo bem-sucedido de chaves no handshake. Ao ler o arquivo cifrado, a saída exibe apenas entropia incompreensível:
 
@@ -96,7 +96,7 @@ Os arquivos `session_key.txt` (cliente) e `decrypted_key.txt` (servidor) resulta
 Salted__f...B.F....kY.vX@...Z...q9.8h!2
 ```
 
-## 🧠 Explicação Técnica
+##  Explicação Técnica
 
 <details>
 <summary><strong>O Gargalo da Criptografia Assimétrica</strong></summary>
