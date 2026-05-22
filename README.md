@@ -1,8 +1,7 @@
 # Projeto Conexões Seguras
 
 **Faculdade de Tecnologia SENAI Felix Guisard**  
-Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas  
-Projeto Semestral — Parte 1/3
+Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas
 
 ---
 
