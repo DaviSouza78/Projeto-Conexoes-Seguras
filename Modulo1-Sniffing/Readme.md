@@ -99,8 +99,6 @@ Content-Type: application/x-www-form-urlencoded
 user=admin&pass=senai123
 ```
 
->  **PONTO DE EVIDÊNCIA 2** — Capture o terminal exibindo as credenciais (`user=admin&pass=senai123`) em texto claro.
-> Salve como `print2_payload_http.png`.
 
 ##  Explicação Técnica
 
