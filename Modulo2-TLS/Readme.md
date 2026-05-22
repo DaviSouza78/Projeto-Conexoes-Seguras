@@ -54,8 +54,6 @@ Visualize os bytes protegidos em representação hexadecimal:
 xxd encrypted_key.bin
 ```
 
->  **PONTO DE EVIDÊNCIA 3** — Capture os blocos hexadecimais gerados pelo `xxd`, comprovando o envelope assimétrico que protege a chave de sessão.
-> Salve como `print3_handshake_rsa.png`.
 
 ### Etapa 4 — Desencriptação e Recuperação de Segredo
 
@@ -84,9 +82,6 @@ Tente ler o arquivo final para simular o tráfego bruto na rede:
 ```bash
 cat seguro.enc
 ```
-
->  **PONTO DE EVIDÊNCIA 4** — Capture a saída de `cat seguro.enc` preenchendo o terminal com caracteres binários ilegíveis, provando a proteção contra leitura local/sniffers.
-> Salve como `print4_dados_simetricos.png`.
 
 ##  Resultado
 
