@@ -29,9 +29,9 @@ Projeto-Conexoes-Seguras/
 
 | Módulo | Tema | Ferramentas |
 |--------|------|-------------|
-| [Módulo 1](modulo1-sniffing/README.md) | Sniffing e Interceptação | `tcpdump`, `iproute2`, `curl` |
-| [Módulo 2](modulo2-tls/README.md) | Criptografia Híbrida e TLS | `OpenSSL` |
-| [Módulo 3](modulo3-sessao/README.md) | Gestão Segura de Sessões | `Node.js`, `Express.js`, `curl` |
+| [Módulo 1](modulo1-sniffing/Readme.md) | Sniffing e Interceptação | `tcpdump`, `iproute2`, `curl` |
+| [Módulo 2](modulo2-tls/Readme.md) | Criptografia Híbrida e TLS | `OpenSSL` |
+| [Módulo 3](modulo3-sessao/Readme.md) | Gestão Segura de Sessões | `Node.js`, `Express.js`, `curl` |
 
 ## Ambiente de Laboratório
 
