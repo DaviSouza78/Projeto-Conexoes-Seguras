@@ -1,10 +1,10 @@
-# 🍪 Módulo 3 — Cookies e Gestão Segura de Sessão
+#  Módulo 3 — Cookies e Gestão Segura de Sessão
 
-## 🎯 Objetivo
+##  Objetivo
 
 Demonstrar, na ótica da **Engenharia de Software**, as vulnerabilidades de **sequestro de sessão (*Session Hijacking*)** geradas pela má configuração do `Cookie SessionID`. Através de um servidor real em **Node.js + Express**, a PoC compara cabeçalhos expostos com a aplicação prática das diretivas **`HttpOnly`** e **`Secure`** contra ataques **XSS**.
 
-## 🧰 Ferramentas Utilizadas
+##  Ferramentas Utilizadas
 
 | Ferramenta | Função |
 | :--- | :--- |
@@ -12,7 +12,7 @@ Demonstrar, na ótica da **Engenharia de Software**, as vulnerabilidades de **se
 | `Express` | Framework web para as APIs de login e controle de cookies |
 | `curl` | Leitura de cabeçalhos HTTP brutos no cliente via flag `-i` |
 
-## 🌐 Configuração de Rede Adicional (Security Group)
+##  Configuração de Rede Adicional (Security Group)
 
 A aplicação roda na **porta 3000**. Garanta a regra de entrada no Security Group:
 
@@ -20,7 +20,7 @@ A aplicação roda na **porta 3000**. Garanta a regra de entrada no Security Gro
 | :---: | :--- | :--- | :--- |
 | **3000** | Custom TCP | `0.0.0.0/0` | Chamadas externas do cliente |
 
-## 🪜 Passo a Passo
+##  Passo a Passo
 
 ### Etapa 1 — Instalação do Ambiente no Ubuntu Server (AWS)
 
@@ -86,7 +86,7 @@ No terminal do seu computador pessoal, audite os cabeçalhos HTTP retornados.
 curl -i http://IP_PUBLICO_DA_SUA_EC2:3000/login-inseguro
 ```
 
-> 📸 **PONTO DE EVIDÊNCIA 5** — Capture o cabeçalho `Set-Cookie` **sem** diretivas protetivas.
+>  **PONTO DE EVIDÊNCIA 5** — Capture o cabeçalho `Set-Cookie` **sem** diretivas protetivas.
 > Salve como `print5_cookie_inseguro.png`.
 
 **Rota Segura (Hardening):**
@@ -95,10 +95,10 @@ curl -i http://IP_PUBLICO_DA_SUA_EC2:3000/login-inseguro
 curl -i http://IP_PUBLICO_DA_SUA_EC2:3000/login-seguro
 ```
 
-> 📸 **PONTO DE EVIDÊNCIA 6** — Capture a resposta HTTP com `; Secure; HttpOnly` acoplados ao `Set-Cookie`.
+>  **PONTO DE EVIDÊNCIA 6** — Capture a resposta HTTP com `; Secure; HttpOnly` acoplados ao `Set-Cookie`.
 > Salve como `print6_cookie_seguro.png`.
 
-## ✅ Resultado
+##  Resultado
 
 Na rota vulnerável o cabeçalho entrega o identificador "seco". Na rota de *hardening*, as tags de controle instruem o navegador sobre como proteger a credencial:
 
@@ -115,7 +115,7 @@ Keep-Alive: timeout=5
 Autenticado. Diretrizes seguras aplicadas!
 ```
 
-## 🧠 Explicação Técnica
+##  Explicação Técnica
 
 <details>
 <summary><strong>O Risco do Sequestro de Sessão (Session Hijacking)</strong></summary>
