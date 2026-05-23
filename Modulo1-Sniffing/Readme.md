@@ -47,8 +47,6 @@ sudo ip link set dev ens5 promisc on
 ip link show ens5
 ```
 
->  **PONTO DE EVIDÊNCIA 1** — Capture a saída do terminal de validação com a flag `PROMISC` visível no cabeçalho da interface.
-> Salve como `print1_nic_promisc.png`.
 
 ### Etapa 3 — Inicialização do Ouvinte Ativo e do Sniffer
 
