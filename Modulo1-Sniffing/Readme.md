@@ -13,7 +13,7 @@ Demonstrar, em ambiente de nuvem controlado, como o **modo promíscuo** de uma p
 | `netcat` (`nc`) | Criação de um listener TCP ativo na porta de destino para completar o handshake |
 | `curl` | Geração externa de tráfego HTTP POST contendo credenciais sensíveis |
 
-## ⚙️ Provisionamento da Instância (AWS Console)
+##  Provisionamento da Instância (AWS Console)
 
 1. Acesse o console da AWS e inicie uma instância EC2 com **Ubuntu Server 22.04 LTS**.
 2. No **Security Group**, adicione as seguintes regras de entrada (*Inbound Rules*):
